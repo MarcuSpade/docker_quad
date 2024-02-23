@@ -38,7 +38,8 @@ USER ubuntu
 
 
 
-# Criando diretório e clonando repositórios
+# Creating directory and cloning repositories.
+
 RUN mkdir -p /home/ubuntu/quad_ws/src/ \
     && cd /home/ubuntu/quad_ws/src/ \
     && git clone --recursive https://github.com/chvmp/champ \
@@ -47,7 +48,7 @@ RUN mkdir -p /home/ubuntu/quad_ws/src/ \
 
 
 
-# Inicialização do rosdep
+# Rosdep and Install robots descriptions
 USER root
 
 COPY setup.sh /root/setup.sh
