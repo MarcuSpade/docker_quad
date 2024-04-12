@@ -39,14 +39,13 @@ USER ubuntu
 
 
 # Creating directory and cloning repositories.
+RUN mkdir -p /home/ubuntu/modbot_ws
 
 RUN mkdir -p /home/ubuntu/quad_ws/src/ \
     && cd /home/ubuntu/quad_ws/src/ \
     && git clone --recursive https://github.com/chvmp/champ \
     && git clone https://github.com/chvmp/champ_teleop \
-    && git clone https://github.com/chvmp/robots.git
-
-
+    && git clone https://github.com/MarcuSpade/robots.git
 
 # Rosdep and Install robots descriptions
 USER root
