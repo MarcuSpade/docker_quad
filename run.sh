@@ -36,6 +36,7 @@ if [ ! "$(docker ps -q -f name=$CONTAINER_NAME)"]; then
             --name $CONTAINER_NAME \
             --network host \
             -v /dev/dri:/dev/dri \
+            -v /home/marcus/modbot_ws:/home/ubuntu/modbot_ws \
 			-v /dev/shm:/dev/shm \
             -p 7414:7414/udp -p 7415:7415/udp \
             $DISPLAY_DEVICE \
