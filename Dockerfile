@@ -57,12 +57,12 @@ RUN /root/setup.sh
 
 USER ubuntu
 
-WORKDIR /home/ubuntu/quad_ws
+WORKDIR /home/ubuntu/modbot_ws
 
 RUN /bin/bash -c "source /opt/ros/noetic/setup.bash && catkin_make"
 
 RUN echo "source /opt/ros/noetic/setup.bash" >> /home/ubuntu/.bashrc
-RUN echo "source /home/ubuntu/quad_ws/devel/setup.bash" >> /home/ubuntu/.bashrc
+RUN echo "source /home/ubuntu/modbot_ws/devel/setup.bash" >> /home/ubuntu/.bashrc
 
 
 RUN echo "TUDO CERTO"
