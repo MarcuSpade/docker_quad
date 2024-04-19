@@ -30,7 +30,7 @@ RUN apt install libasound2 libnss3 -y
 
 # Install utils
 RUN apt install -y vim gedit nano
-RUN apt install ros-noetic-velodyne*
+RUN apt install -y ros-noetic-velodyne*
 
 # Add user
 RUN useradd -rm -d /home/ubuntu -p $(perl -e 'print crypt($ARGV[0], "password")' 'ubuntu') -s /bin/bash -g root -G sudo -u 1001 ubuntu
