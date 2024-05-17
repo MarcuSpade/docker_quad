@@ -9,7 +9,7 @@ cd <directory_to_ws>/docker_quad/
 
 Run the docker build in te Dockerfile folder
 
-docker build -it quad-image .
+docker build -t quad-image .
 
 After that, execute the run.sh
 
