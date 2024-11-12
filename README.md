@@ -1,20 +1,33 @@
-Docker built to run the Chvmp repositories.
+# Docker for CHVMP Repositories
+
+This Docker image is set up to run the CHVMP repositories efficiently within a container.
 
 ## Instructions
 
-Find the docker folder
-Do not forget to change <...> parts
+### Locate the Docker Folder
 
-cd <directory_to_ws>/docker_quad/
+Navigate to the Docker folder within your workspace. Make sure to replace `<...>` placeholders with your specific directory paths.
 
-Run the docker build in te Dockerfile folder
+    cd <path_to_workspace>/docker_quad/
 
-docker build -t quad-image .
+### Build the Docker Image
 
-After that, execute the run.sh
+Within the Docker folder, execute the following command to build the Docker image:
 
-It's important to remember in the run.sh 39 line, we have a share folder with the docker container
+    docker build -t quad-image .
     
-  ###  -v /home/marcus/modbot_ws:/home/ubuntu/modbot_ws \
+### Run the Docker Container
 
-If you want delete this line or you can put you workspace folder to share with the docker.
+After building the image, run the container using `run.sh`. 
+
+    ./run.sh
+
+Make sure to check the shared folder path in line 39 of run.sh.
+
+In `run.sh`:
+
+    -v <path_to_workspace>:/home/ubuntu/modbot_ws \
+
+This line specifies a shared volume between your host machine and the Docker container. If you want to use a different workspace, replace `<...>` placeholders with your specific directory paths. Alternatively, you can remove this line if you do not need a shared volume.
+Additional Notes
+
